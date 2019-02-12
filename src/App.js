@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import "./App.css";
 import BookSearch from "./components/bookSearch";
 import NavBar from "./components/navBar";
-import Results from "./components/results";
 
 
 class App extends Component {
@@ -13,7 +12,6 @@ class App extends Component {
         <header className="App-header">
           <NavBar />
           <BookSearch />
-          <Results />
         </header>
       </div>
     );

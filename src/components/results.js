@@ -4,19 +4,23 @@ import BookCard from "./BookCard";
 
 
 const Results = (props) => {
+      console.log(props)
       return (
       <div className="list">
-        {
+        {props.booksProp ? (
             props.booksProp.map((book, i) => {
+                var info = book.volumeInfo;
                 return <BookCard 
                         key={i}
-                        title={book.title}
-                        author={book.author}
-                        description={book.volumeInfo.subtitle}
-                        image={book.volumeinfo.imagelinks.thumbnail}
-                        link={book.previewLink} />
+                        title={info.title}
+                        author={info.author}
+                        description={info.subtitle}
+                        image={info.imageLinks.thumbnail}
+                        link={info.previewLink} />
             })
-        }
+        ) : ( 
+        <h3>No Results to Display</h3>
+        )}
       </div>
     )
 }

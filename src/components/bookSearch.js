@@ -6,12 +6,14 @@ import Results from './results';
 
 class BookSearch extends Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            books: [],
-            searchField: ''
-        }
+    // constructor(props){
+    //     super(props);
+    //     this.
+    // }
+
+    state = {
+        books: [],
+        searchField: ''
     }
 
     bookApi = (event) => {
@@ -31,14 +33,14 @@ class BookSearch extends Component {
     }
 
 
-        render() { 
-            return (
-                <div>
-                    <Search bookApiProp={this.bookApi} handleSearchProp={this.handleSearch}/>
-                    <Results booksProp={this.state.books}/>
-                </div>
-            );
-        }
+    render() { 
+        return (
+            <div>
+                <Search bookApiProp={this.bookApi} handleSearchProp={this.handleSearch}/>
+                <Results booksProp={this.state.books}/>
+            </div>
+        );
+    }
 }
  
 export default BookSearch;
